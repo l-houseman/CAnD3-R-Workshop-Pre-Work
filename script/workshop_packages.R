@@ -43,7 +43,7 @@ library(systemfonts)
 library(scales)
 library(patchwork)
 library(gganimate)
-library(gifski)
+library(gifski) #still is a problem
 library(nomisr)
 library(plotly)
 library(htmltools)
@@ -77,3 +77,4 @@ library(gtsummary)
 library(panelr)
 library(remotes)
 library(GGally)
+

@@ -1,0 +1,131 @@
+---
+title: "Pre Work Tasks"
+author: "Leah Houseman"
+date: "`r Sys.Date()`"
+output:
+    html_document:
+    keep_md: yes
+  pdf_document: default
+---
+********************************************************************************
+
+#Preparation chunk
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### **Tasks**
+1. Download R and R Studio ✅
+2. Link git to RStudio ✅, look into usethis ❌
+3. Install all libraries/packages ✅,   ⚠️`BUT gifski is still a problem`⚠️
+
+```{r}
+
+# LIST OF PACKAGES (AS OF LATE-JULY, 2025) --------------------------
+
+# Installing the packages
+renv::restore()
+
+# Suite of Packages for Day 1
+
+library(ggdist)
+library(ggtext)
+library(ggridges)
+library(ggrepel)
+library(lattice)
+library(skimr)
+library(summarytools)
+library(tinyplot)
+library(ggraph)
+library(lemon)
+library(colorspace)
+library(gglgbtq)
+library(paletteer)
+library(see)
+library(hrbrthemes)
+library(ggthemes)
+library(LexisPlotR)
+library(demography)
+library(forecast)
+library(gapminder)
+library(palmerpenguins)
+library(tidyverse)
+library(systemfonts)
+
+# Suite of Packages for Day 2
+
+library(scales)
+library(patchwork)
+library(gganimate)
+library(gifski) #still is a problem
+library(nomisr)
+library(plotly)
+library(htmltools)
+library(leafpop)
+library(leaflet)
+library(mapview)
+library(usmapdata)
+library(usmap)
+library(mapcan)
+library(cancensus)
+library(tidycensus)
+library(geojsonsf)
+library(tidygeocoder)
+library(rnaturalearthdata)
+library(rnaturalearth)
+library(ggspatial)
+library(terra)
+library(sp)
+library(sf)
+library(gt)
+
+
+# Suite of Packages for Day 3
+
+library(estimatr)
+library(ggeffects)
+library(marginaleffects)
+library(modelsummary)
+library(effects)
+library(gtsummary)
+library(panelr)
+library(remotes)
+library(GGally)
+```
+
+4. Install required fonts ✅
+5. Ensure `this simple plot`👇 runs ✅
+
+```{r}
+#5.`this simple plot`
+library(tidyverse)
+
+iris |> ggplot(mapping = aes(x = Sepal.Length,
+                             y = Sepal.Width)) +
+        geom_point() +
+        theme_bw(base_family = "Inconsolata")
+
+```
+
+6. Ensure that `Workshop_packages.r` from `script` folder runs without issue. Does, except for ⚠️gifski⚠️. Divine is working on it and will let us know.🔜
+7. Acruire API Keys from CensusMapper and the US Census Bureau, and install them ✅
+
+```{r}
+#7. API Keys Install
+#CensusMapper
+library(cancensus)
+#Already Installed, Don't run again
+#set_cancensus_api_key('<CensusMapper_f58daf7c0e373e1fb9ba67de981f4f5d>', install = TRUE)
+
+#US Census Bureayu
+library(tidycensus)
+library(tidyverse)
+#Already Installed, Don't run again
+#census_api_key("696bf336a583e648a672d6c18579883acc6ed543", install = TRUE)
+```
+
+
+
+
+
